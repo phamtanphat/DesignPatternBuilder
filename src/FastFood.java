@@ -44,4 +44,41 @@ public class FastFood {
     public void setWater(Water water) {
         this.water = water;
     }
+
+
+    public class BuilderFastFood implements Builder{
+        private Hamburger hamburger;
+        private Salad salad;
+        private Chicken chicken;
+        private Water water;
+
+        @Override
+        public Builder setHamburger(Hamburger hamburger) {
+            this.hamburger = hamburger;
+            return this;
+        }
+
+        @Override
+        public Builder setSalad(Salad salad) {
+            this.salad = salad;
+            return this;
+        }
+
+        @Override
+        public Builder setChicken(Chicken chicken) {
+            this.chicken = chicken;
+            return this;
+        }
+
+        @Override
+        public Builder setWater(Water water) {
+            this.water = water;
+            return this;
+        }
+
+        @Override
+        public FastFood build() {
+            return new FastFood(hamburger,salad,chicken,water);
+        }
+    }
 }
