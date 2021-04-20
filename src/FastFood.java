@@ -46,7 +46,7 @@ public class FastFood {
     }
 
 
-    public class BuilderFastFood implements Builder{
+    public static class BuilderFastFood implements Builder{
         private Hamburger hamburger;
         private Salad salad;
         private Chicken chicken;
